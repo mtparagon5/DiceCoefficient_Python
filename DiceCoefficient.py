@@ -109,7 +109,7 @@ def dice_coefficient(rect1, rect2):
                         "Dice Coefficient = {}".format(round(dice_coefficient, 3)))
         return message
     if intersect(rect1, rect2) == None:
-        print("0: There is no overlap")
+        print("0 -- There is no overlap")
 
 def get_rect1():
     while True:
