@@ -174,7 +174,7 @@ def main():
     rect2 = rectangle_2d(rect2_bounds[0], rect2_bounds[1], rect2_bounds[2], rect2_bounds[3])
     if intersect(rect1, rect2) != "There is no overlap...":
         overlapping_rectangle = intersect(rect1, rect2)
-
+    print()
     print("Rectangle 1 Attributes:")
     print("x,y origin: ({}, {}) \nx_size: {} \ny_size: {}".format(rect1_bounds[0], rect1_bounds[1], rect1_bounds[2], rect1_bounds[3]))
     print("Area = {}".format(area(rect1)))
