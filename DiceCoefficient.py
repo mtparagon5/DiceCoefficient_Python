@@ -99,9 +99,14 @@ def intersect(rect1, rect2):
 
 def dice_coefficient(rect1, rect2):
     if intersect(rect1, rect2) != None:
+        overlap_rect = intersect(rect1, rect2)
+        overlap_rect_xorigin = overlap_rect[0]
+        overlap_rect_yorigin = overlap_rect[1]
         area_overlap = area(intersect(rect1, rect2))
         dice_coefficient = ((2*area(intersect(rect1, rect2))) / (area(rect1) + area(rect2)))
-        message = print("Area of overlap = {}".format(area_overlap) + "\n" + "Dice Coefficient = {}".format(round(dice_coefficient, 3)))
+        message = print("Point of intersection: ({}, {})".format(overlap_rect_xorigin, overlap_rect_yorigin) + "\n" +
+                        "Area of overlap = {}".format(area_overlap) + "\n" + 
+                        "Dice Coefficient = {}".format(round(dice_coefficient, 3)))
         return message
     if intersect(rect1, rect2) == None:
         print("0: There is no overlap")
