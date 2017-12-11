@@ -5,21 +5,7 @@ def rectangle_2d(x, y, x_size, y_size):
     y = float(y)
     x_size = float(x_size)
     y_size = float(y_size)
-    # can put this stuff as method when turn rect_2d into class
-    #res = 0.01
-    #tempx = x
-    #xrange_list = []
-    #x_endpoint = x + x_size
-    #print("x: {}, y: {}, x_size: {}, y_size: {}".format(x, y, x_size, y_size))
-    #while tempx <= x_endpoint:
-        #if tempx == x:
-        #xrange_list.append(tempx)
-        #tempx += res
-        #else:
-         #   xrange_list.append(tempx)
-         #   tempx += res
-    #for val in xrange_list:
-     #   print(round(val, 1))
+
     return x, y, x_size, y_size
 
 def area(rect):
@@ -112,12 +98,6 @@ def intersect(rect1, rect2):
             return "There is no overlap..."
 
 def dice_coefficient(rect1, rect2):
-    #if intersect(rect1, rect2) == "There is no overlap...":
-    #   dice_coefficient = "0: There is no overlap"
-    #  return dice_coefficient
-    #if area(rect1) != None:
-     #   if area(rect2) != None:
-    #else:
     if intersect(rect1, rect2) != None:
         area_overlap = area(intersect(rect1, rect2))
         dice_coefficient = ((2*area(intersect(rect1, rect2))) / (area(rect1) + area(rect2)))
@@ -126,7 +106,6 @@ def dice_coefficient(rect1, rect2):
     if intersect(rect1, rect2) == None:
         print("0: There is no overlap")
 
-    # testing output
 def get_rect1():
     while True:
         try: 
